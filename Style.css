@@ -680,3 +680,68 @@ font-weight:bold;
 margin:auto;
 
 }
+
+
+/* ---------- Section Spacing ---------- */
+
+section{
+
+padding-top:70px;
+
+padding-bottom:70px;
+
+}
+
+/* ---------- KPI Section ---------- */
+
+.stats{
+
+margin-top:60px;
+
+margin-bottom:80px;
+
+}
+
+/* ---------- Features ---------- */
+
+.features{
+
+margin-top:80px;
+
+}
+
+.features h2{
+
+font-size:48px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.features p{
+
+color:#666;
+
+}
+
+/* ---------- Cards ---------- */
+
+.card{
+
+border:none;
+
+border-radius:18px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
