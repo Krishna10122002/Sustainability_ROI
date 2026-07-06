@@ -820,3 +820,33 @@ position:relative;
 z-index:1;
 
 }
+
+/* ===== FORCE NAVBAR BACKGROUND ===== */
+nav{
+    background:#198754 !important;
+    opacity:1 !important;
+    z-index:99999 !important;
+}
+
+/* Cover the area behind the fixed navbar */
+nav::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#198754;
+    z-index:-1;
+}
+
+/* Push page below navbar */
+body{
+    padding-top:90px !important;
+}
+
+/* Hero starts below navbar */
+.hero{
+    margin-top:0 !important;
+    padding-top:60px !important;
+}
