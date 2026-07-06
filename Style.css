@@ -50,44 +50,27 @@ HERO
 
 .hero{
 
-background:linear-gradient(135deg,#0f766e,#198754);
+padding:170px 0 120px;
+
+background:linear-gradient(135deg,#0d5c63,#1c8c74);
 
 color:white;
 
-padding:140px 0 100px;
+}
+
+.hero img{
+
+transition:.5s;
+
+border-radius:20px;
 
 }
 
-.hero h1{
+.hero img:hover{
 
-font-size:3rem;
-
-font-weight:700;
+transform:scale(1.03);
 
 }
-
-.hero p{
-
-font-size:1.1rem;
-
-line-height:1.8;
-
-}
-
-.hero button{
-
-margin-top:15px;
-
-}
-
-.hero-icon{
-
-font-size:220px;
-
-opacity:.20;
-
-}
-
 /* =======================
 KPI
 ======================= */
