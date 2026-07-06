@@ -25,28 +25,55 @@ padding-top: 85px;
 NAVBAR
 ======================= */
 
-.navbar{
-    background: #198754 !important;
-    padding: 12px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
+<nav class="navbar navbar-expand-lg fixed-top" style="background:#198754;">
 
-.navbar-brand{
-    color: white !important;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+<div class="container">
 
-.nav-link{
-    color: white !important;
-    font-weight: 500;
-    margin-left: 20px;
-}
+<a class="navbar-brand text-white fw-bold" href="index.html">
+<i class="fa-solid fa-leaf text-warning"></i>
+Sustainability ROI
+</a>
 
-.nav-link:hover{
-    color: #d4edda !important;
-}
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
 
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link text-white" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link text-white" href="company-inputs.html">Company Inputs</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link text-white" href="initiative-planning.html">Initiatives</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link text-white" href="dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link text-white" href="reputation.html">Reputation</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
 /* =======================
 HERO
 ======================= */
