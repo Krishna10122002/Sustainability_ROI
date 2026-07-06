@@ -80,25 +80,10 @@ HERO
 
 .hero{
 
-padding:170px 0 120px;
-
+padding-top:120px;
+padding-bottom:80px;
 background:linear-gradient(135deg,#0d5c63,#1c8c74);
-
 color:white;
-
-}
-
-.hero img{
-
-transition:.5s;
-
-border-radius:20px;
-
-}
-
-.hero img:hover{
-
-transform:scale(1.03);
 
 }
 /* =======================
