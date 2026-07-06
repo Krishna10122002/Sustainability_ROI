@@ -143,3 +143,24 @@ if(footer){
 footer.innerHTML="© "+year+" Sustainability ROI Calculator | Developed by Krishna";
 
 }
+
+
+// Why Cards Animation
+
+const whyCards=document.querySelectorAll(".why-card");
+
+whyCards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px) scale(1.03)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px) scale(1)";
+
+});
+
+});
