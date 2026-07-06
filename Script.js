@@ -323,3 +323,42 @@ tension:.4
 });
 
 }
+// ================= Reputation Radar Chart =================
+
+if(document.getElementById("radarChart")){
+
+new Chart(radarChart,{
+
+type:"radar",
+
+data:{
+
+labels:[
+
+"Governance",
+
+"Environment",
+
+"Certifications",
+
+"Commercial",
+
+"Efficiency"
+
+],
+
+datasets:[{
+
+label:"Reputation Index",
+
+data:[2.14,2.43,2.62,2.36,2.09],
+
+fill:true
+
+}]
+
+}
+
+});
+
+}
