@@ -27,20 +27,25 @@ NAVBAR
 
 .navbar{
     background: #198754 !important;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
-    padding: 15px 0;
+    padding: 12px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.navbar .nav-link{
+.navbar-brand{
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link{
     color: white !important;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
-.navbar .nav-link:hover{
+.nav-link:hover{
     color: #d4edda !important;
 }
-
 
 /* =======================
 HERO
@@ -742,4 +747,7 @@ transform:translateY(-8px);
 
 box-shadow:0 15px 35px rgba(0,0,0,.15);
 
+}
+body{
+    padding-top:80px;
 }
