@@ -45,6 +45,7 @@ data-bs-target="#menu">
 
 <div class="collapse navbar-collapse" id="menu">
 
+
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
@@ -776,4 +777,46 @@ box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 body{
     padding-top:80px;
+}
+
+/* ===== Banner ===== */
+
+.bg-success{
+
+background:#198754 !important;
+
+}
+
+/* ===== Hero ===== */
+
+.hero h1{
+
+font-size:3.7rem;
+
+font-weight:700;
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+}
+
+/* ===== Navbar ===== */
+
+.navbar{
+
+z-index:9999;
+
+}
+
+/* ===== Smooth Sections ===== */
+
+section{
+
+position:relative;
+
+z-index:1;
+
 }
