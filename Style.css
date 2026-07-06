@@ -850,3 +850,19 @@ body{
     margin-top:0 !important;
     padding-top:60px !important;
 }
+/* Force navbar links to be black */
+.navbar .nav-link {
+    color: #000 !important;
+    opacity: 1 !important;
+}
+
+/* Active page */
+.navbar .nav-link.active {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+    color: #212529 !important;
+}
