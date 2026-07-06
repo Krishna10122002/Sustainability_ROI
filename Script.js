@@ -202,3 +202,49 @@ card.style.transform="translateY(0px)";
 });
 
 });
+
+// Initiative Search
+
+const search=document.getElementById("searchBox");
+
+if(search){
+
+search.addEventListener("keyup",function(){
+
+let filter=this.value.toLowerCase();
+
+let rows=document.querySelectorAll("#initiativeTable tr");
+
+rows.forEach(function(row){
+
+let text=row.innerText.toLowerCase();
+
+row.style.display=text.includes(filter)?"":"none";
+
+});
+
+});
+
+}
+
+// Count Selected Initiatives
+
+const boxes=document.querySelectorAll("input[type='checkbox']");
+
+const counter=document.getElementById("selectedCount");
+
+if(counter){
+
+boxes.forEach(box=>{
+
+box.addEventListener("change",()=>{
+
+let total=document.querySelectorAll("input[type='checkbox']:checked').length;
+
+counter.innerHTML=total;
+
+});
+
+});
+
+}
