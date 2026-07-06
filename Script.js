@@ -248,3 +248,78 @@ counter.innerHTML=total;
 });
 
 }
+// ================= DASHBOARD CHARTS =================
+
+if(document.getElementById("barChart")){
+
+new Chart(barChart,{
+
+type:"bar",
+
+data:{
+
+labels:["Investment","Benefit"],
+
+datasets:[{
+
+label:"₹ Million",
+
+data:[46,11.2]
+
+}]
+
+}
+
+});
+
+}
+
+if(document.getElementById("pieChart")){
+
+new Chart(pieChart,{
+
+type:"pie",
+
+data:{
+
+labels:["Reduced","Remaining"],
+
+datasets:[{
+
+data:[1408,3200]
+
+}]
+
+}
+
+});
+
+}
+
+if(document.getElementById("lineChart")){
+
+new Chart(lineChart,{
+
+type:"line",
+
+data:{
+
+labels:["Governance","Environment","Certifications","Commercial","Efficiency"],
+
+datasets:[{
+
+label:"Reputation Index",
+
+data:[2.14,2.43,2.62,2.36,2.09],
+
+fill:false,
+
+tension:.4
+
+}]
+
+}
+
+});
+
+}
