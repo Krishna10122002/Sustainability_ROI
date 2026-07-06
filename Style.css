@@ -18,6 +18,7 @@ scroll-behavior:smooth;
 body{
 background:#f5f7fa;
 color:#333;
+padding-top: 85px;
 }
 
 /* =======================
@@ -25,24 +26,21 @@ NAVBAR
 ======================= */
 
 .navbar{
-background:#0f4c5c;
-padding:15px 0;
-transition:.4s;
+    background: #198754 !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    padding: 15px 0;
 }
 
-.navbar-brand{
-font-size:1.5rem;
+.navbar .nav-link{
+    color: white !important;
+    font-weight: 500;
+    margin-left: 15px;
 }
 
-.nav-link{
-color:white !important;
-margin-left:15px;
-font-weight:500;
+.navbar .nav-link:hover{
+    color: #d4edda !important;
 }
 
-.nav-link:hover{
-color:#ffd166 !important;
-}
 
 /* =======================
 HERO
