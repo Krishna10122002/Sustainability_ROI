@@ -1,93 +1,145 @@
-function calculateROI(){
+// ================================
+// Sustainability ROI Website
+// app.js
+// ================================
 
-let investment =
-Number(document.getElementById("investment").value);
 
-let savings =
-Number(document.getElementById("savings").value);
+// Welcome Button
 
-let incentives =
-Number(document.getElementById("incentives").value);
+function startProject(){
 
-let maintenance =
-Number(document.getElementById("maintenance").value);
-
-let life =
-Number(document.getElementById("life").value);
-
-let carbon =
-Number(document.getElementById("carbon").value);
-
-let water =
-Number(document.getElementById("water").value);
-
-let waste =
-Number(document.getElementById("waste").value);
-
-if(
-investment<=0 ||
-life<=0
-){
-
-alert("Please enter valid values.");
-
-return;
+    alert("Welcome to Sustainability ROI Calculator!\n\nLet's start your ESG assessment.");
 
 }
 
-let totalSavings =
-(savings*life)+incentives;
 
-let totalMaintenance =
-maintenance*life;
+// ================================
+// Sticky Navbar
+// ================================
 
-let netProfit =
-totalSavings-totalMaintenance-investment;
+window.addEventListener("scroll", function(){
 
-let roi =
-(netProfit/investment)*100;
+    const navbar = document.querySelector(".navbar");
 
-let payback =
-investment/(savings-maintenance);
+    if(window.scrollY > 50){
 
-let score=0;
+        navbar.style.background="#063a45";
+        navbar.style.padding="10px 0";
+        navbar.style.transition="0.3s";
 
-score+=Math.min(carbon,40);
+    }
 
-score+=Math.min(water/2000,30);
+    else{
 
-score+=Math.min(waste/50,30);
+        navbar.style.background="#0f4c5c";
+        navbar.style.padding="15px 0";
 
-let rating="";
+    }
 
-if(score>=85)
-rating="⭐⭐⭐⭐⭐ Excellent";
+});
 
-else if(score>=70)
-rating="⭐⭐⭐⭐ Very Good";
 
-else if(score>=55)
-rating="⭐⭐⭐ Good";
+// ================================
+// Card Hover Animation
+// ================================
 
-else if(score>=40)
-rating="⭐⭐ Average";
+const cards=document.querySelectorAll(
+".kpi-card,.feature-card,.pillar-card,.testimonial"
+);
 
-else
-rating="⭐ Needs Improvement";
+cards.forEach(card=>{
 
-document.getElementById("roi").innerHTML=
-roi.toFixed(2)+" %";
+card.addEventListener("mouseenter",()=>{
 
-document.getElementById("profit").innerHTML=
-"₹ "+netProfit.toLocaleString();
+card.style.transform="translateY(-10px)";
 
-document.getElementById("payback").innerHTML=
-payback.toFixed(2)+" Years";
+});
 
-document.getElementById("score").innerHTML=
-score.toFixed(0)+" /100";
+card.addEventListener("mouseleave",()=>{
 
-document.getElementById("rating").innerHTML=
-rating;
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+
+// ================================
+// Progress Bar Animation
+// ================================
+
+const progressBars=document.querySelectorAll(".progress-bar");
+
+window.addEventListener("load",()=>{
+
+progressBars.forEach(bar=>{
+
+let width=bar.style.width;
+
+bar.style.width="0";
+
+setTimeout(()=>{
+
+bar.style.width=width;
+
+bar.style.transition="2s";
+
+},300);
+
+});
+
+});
+
+
+// ================================
+// Simple Fade Animation
+// ================================
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+const elements=document.querySelectorAll(
+
+".kpi-card,.feature-card,.pillar-card,.testimonial,.about-section"
+
+);
+
+elements.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(40px)";
+
+el.style.transition="0.8s";
+
+observer.observe(el);
+
+});
+
+
+// ================================
+// Footer Year
+// ================================
+
+const year=new Date().getFullYear();
+
+const footer=document.querySelector("footer p");
+
+if(footer){
+
+footer.innerHTML="© "+year+" Sustainability ROI Calculator | Developed by Krishna";
 
 }
