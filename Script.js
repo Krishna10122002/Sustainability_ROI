@@ -362,3 +362,31 @@ fill:true
 });
 
 }
+function calculateROI(){
+
+// Example values from your project
+let investment = 46044600;
+let savings = 5955000;
+let revenue = 24658400;
+let risk = 10950000;
+let operating = 9825000;
+
+let netBenefit = savings + revenue + risk - operating;
+
+let roi = ((netBenefit / investment) * 100).toFixed(2);
+
+let payback = (investment / netBenefit).toFixed(2);
+
+document.getElementById("investmentResult").innerHTML =
+"₹" + investment.toLocaleString();
+
+document.getElementById("benefitResult").innerHTML =
+"₹" + netBenefit.toLocaleString();
+
+document.getElementById("roiResult").innerHTML =
+roi + "%";
+
+document.getElementById("paybackResult").innerHTML =
+payback + " Years";
+
+}
