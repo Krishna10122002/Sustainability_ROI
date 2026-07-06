@@ -239,7 +239,7 @@ boxes.forEach(box=>{
 
 box.addEventListener("change",()=>{
 
-let total=document.querySelectorAll("input[type='checkbox']:checked').length;
+let total = document.querySelectorAll("input[type='checkbox']:checked").length;
 
 counter.innerHTML=total;
 
