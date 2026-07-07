@@ -364,24 +364,46 @@ fill:true
 }
 function calculateROI(){
 
-// Example values from your project
-let investment = 46044600;
-let savings = 5955000;
-let revenue = 24658400;
-let risk = 10950000;
-let operating = 9825000;
+const investment =
+parseFloat(document.getElementById("investment").value) || 0;
 
-let netBenefit = savings + revenue + risk - operating;
+const savings =
+parseFloat(document.getElementById("savings").value) || 0;
 
-let roi = ((netBenefit / investment) * 100).toFixed(2);
+const revenue =
+parseFloat(document.getElementById("revenue").value) || 0;
 
-let payback = (investment / netBenefit).toFixed(2);
+const risk =
+parseFloat(document.getElementById("risk").value) || 0;
+
+const operating =
+parseFloat(document.getElementById("operating").value) || 0;
+
+
+const netBenefit =
+savings +
+revenue +
+risk -
+operating;
+
+
+const roi =
+investment > 0
+? ((netBenefit / investment) * 100).toFixed(2)
+: 0;
+
+
+const payback =
+netBenefit > 0
+? (investment / netBenefit).toFixed(2)
+: "N/A";
+
 
 document.getElementById("investmentResult").innerHTML =
-"₹" + investment.toLocaleString();
+"₹ " + investment.toLocaleString();
 
 document.getElementById("benefitResult").innerHTML =
-"₹" + netBenefit.toLocaleString();
+"₹ " + netBenefit.toLocaleString();
 
 document.getElementById("roiResult").innerHTML =
 roi + "%";
