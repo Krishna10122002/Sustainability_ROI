@@ -94,6 +94,45 @@ Dashboard
 
 </nav>
 
+<div class="row g-3">
+
+<div class="col-md-4">
+<label>Investment</label>
+<input id="investment"
+class="form-control"
+type="number">
+</div>
+
+<div class="col-md-4">
+<label>Savings</label>
+<input id="savings"
+class="form-control"
+type="number">
+</div>
+
+<div class="col-md-4">
+<label>Revenue</label>
+<input id="revenue"
+class="form-control"
+type="number">
+</div>
+
+<div class="col-md-4">
+<label>Risk Reduction</label>
+<input id="risk"
+class="form-control"
+type="number">
+</div>
+
+<div class="col-md-4">
+<label>Operating Cost</label>
+<input id="operating"
+class="form-control"
+type="number">
+</div>
+
+</div>
+
 <!-- Header -->
 
 <section class="hero py-5">
@@ -298,6 +337,104 @@ value="50000">
 
 <input class="form-control"
 value="70000">
+
+</div>
+
+<button
+class="btn btn-success mt-4"
+onclick="calculateROI()">
+
+Calculate ROI
+
+</button>
+
+<div class="row mt-5">
+
+<div class="col-md-3">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h6>Investment</h6>
+
+<h3 id="investmentResult">
+
+₹0
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h6>Net Benefit</h6>
+
+<h3 id="benefitResult">
+
+₹0
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h6>ROI</h6>
+
+<h3 id="roiResult">
+
+0%
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h6>Payback</h6>
+
+<h3 id="paybackResult">
+
+0 Years
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
