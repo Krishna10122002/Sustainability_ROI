@@ -252,7 +252,9 @@ counter.innerHTML=total;
 
 if(document.getElementById("barChart")){
 
-new Chart(barChart,{
+new Chart(
+document.getElementById("barChart"),
+{
 
 type:"bar",
 
@@ -276,7 +278,9 @@ data:[46,11.2]
 
 if(document.getElementById("pieChart")){
 
-new Chart(pieChart,{
+new Chart(
+document.getElementById("pieChart"),
+{
 
 type:"pie",
 
@@ -298,7 +302,9 @@ data:[1408,3200]
 
 if(document.getElementById("lineChart")){
 
-new Chart(lineChart,{
+new Chart(
+document.getElementById("lineChart"),
+{
 
 type:"line",
 
@@ -327,7 +333,9 @@ tension:.4
 
 if(document.getElementById("radarChart")){
 
-new Chart(radarChart,{
+new Chart(
+document.getElementById("radarChart"),
+{
 
 type:"radar",
 
