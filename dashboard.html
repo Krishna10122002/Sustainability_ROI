@@ -283,3 +283,81 @@ Reputation Index by ESG Pillar
 </body>
 
 </html>
+
+<section class="container my-5">
+
+<h2 class="text-center text-success mb-4">
+ROI Calculator
+</h2>
+
+<div class="row">
+
+<div class="col-md-2">
+<input type="number" id="investment" class="form-control" placeholder="Investment">
+</div>
+
+<div class="col-md-2">
+<input type="number" id="savings" class="form-control" placeholder="Savings">
+</div>
+
+<div class="col-md-2">
+<input type="number" id="revenue" class="form-control" placeholder="Revenue Impact">
+</div>
+
+<div class="col-md-2">
+<input type="number" id="risk" class="form-control" placeholder="Risk Avoided">
+</div>
+
+<div class="col-md-2">
+<input type="number" id="operating" class="form-control" placeholder="Operating Cost">
+</div>
+
+<div class="col-md-2">
+<button class="btn btn-success w-100" onclick="calculateROI()">
+Calculate
+</button>
+</div>
+
+</div>
+
+<div class="row mt-4">
+
+<div class="col-md-3">
+<div class="card text-center shadow">
+<div class="card-body">
+<h3 id="investmentResult">₹0</h3>
+<p>Total Investment</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card text-center shadow">
+<div class="card-body">
+<h3 id="benefitResult">₹0</h3>
+<p>Net Benefit</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card text-center shadow">
+<div class="card-body">
+<h3 id="roiResult">0%</h3>
+<p>ROI</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card text-center shadow">
+<div class="card-body">
+<h3 id="paybackResult">0 Years</h3>
+<p>Payback</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
