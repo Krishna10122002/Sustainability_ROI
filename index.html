@@ -1,956 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainability ROI Calculator</title>
 
     <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-          href="style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow fixed-top">
+    <div class="container">
 
-<nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fa-solid fa-leaf text-warning"></i>
+            Sustainability ROI
+        </a>
 
-<div class="container">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<a class="navbar-brand fw-bold" href="index.html">x
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
 
-<i class="fa-solid fa-leaf text-warning"></i>
+                <li class="nav-item">
+                    <a class="nav-link" href="company-inputs.html">
+                        Company Inputs
+                    </a>
+                </li>
 
-Sustainability ROI
+                <li class="nav-item">
+                    <a class="nav-link" href="initiative-planning.html">
+                        Initiatives
+                    </a>
+                </li>
 
-</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
 
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse"
-id="menu">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link active" href="index.html">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="company-inputs.html">Company Inputs</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="initiative-planning.html">Initiatives</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="dashboard.html">Dashboard</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="reputation.html">Reputation</a>
-</li>
-
-</ul>
-</div>
-
-</div>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.html">
+                        Reports
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<!-- Top Banner -->
-
-<div class="bg-success text-white py-2 shadow-sm">
-
-<div class="container text-center">
-
-<i class="fa-solid fa-chart-line"></i>
-
-Financial • Environmental • Social • Governance Analytics Platform
-
+<!-- TOP STRIP -->
+<div class="bg-dark text-white py-2 mt-5 text-center">
+    Financial • Environmental • Social • Governance Analytics Platform
 </div>
 
-</div>
+<!-- HERO SECTION -->
+<section class="bg-success text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
 
-<!-- HERO -->
+            <div class="col-lg-6">
+                <span class="badge bg-warning text-dark mb-3">
+                    🌱 ESG Analytics Platform
+                </span>
 
-<section class="hero">
+                <h1 class="display-4 fw-bold">
+                    Measure
+                    <span class="text-warning">
+                        Sustainability ROI
+                    </span>
+                    with Confidence
+                </h1>
 
-<div class="container">
+                <p class="lead mt-3">
+                    Evaluate financial returns, carbon reduction,
+                    and ESG reputation using one integrated platform.
+                </p>
 
-<div class="row align-items-center">
+                <a href="company-inputs.html"
+                   class="btn btn-light btn-lg me-2">
+                    Start Assessment
+                </a>
 
-<div class="col-lg-6">
+                <a href="dashboard.html"
+                   class="btn btn-outline-light btn-lg">
+                    View Dashboard
+                </a>
+            </div>
 
-<span class="badge bg-warning text-dark mb-3">
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=900"
+                     class="img-fluid rounded shadow">
+            </div>
 
-🌱 ESG Analytics Platform
-
-</span>
-
-<h1 class="display-3 fw-bold">
-
-Measure
-
-<span class="text-warning">
-
-Sustainability ROI
-
-</span>
-
-with Confidence
-
-</h1>
-
-<p class="lead mt-3">
-
-Evaluate financial returns, carbon reduction and ESG reputation using a single integrated platform.
-
-</p>
-<p class="lead mt-4">
-
-Analyze investments, calculate ROI, monitor carbon reduction,
-measure reputation benefits, and build a sustainable future.
-
-</p>
-
-<a href="company-inputs.html" class="btn btn-light btn-lg">
-<i class="fa-solid fa-play"></i>
-Start Assessment
-</a>
-
-<a href="dashboard.html" class="btn btn-outline-light btn-lg">
-<i class="fa-solid fa-chart-column"></i>
-View Dashboard
-</a>
-
-</div>
-
-</div>
-
-<div class="col-lg-6 text-center">
-
-<img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=900"
-
-class="img-fluid rounded-4 shadow-lg">
-
-</div>
-
-</div>
-
-</div>
-
+        </div>
+    </div>
 </section>
 
-<section class="bg-white shadow-sm py-4">
-
-<div class="container">
-
-<div class="row text-center">
-
-<div class="col-md-3">
-
-<h2 class="text-success">45+</h2>
-
-<p>Sustainability Initiatives</p>
-
-</div>
-
-<div class="col-md-3">
-
-<h2 class="text-success">5</h2>
-
-<p>ESG Pillars</p>
-
-</div>
-
-<div class="col-md-3">
-
-<h2 class="text-success">1408</h2>
-
-<p>tCO₂ Reduction</p>
-
-</div>
-
-<div class="col-md-3">
-
-<h2 class="text-success">₹11.2M</h2>
-
-<p>Annual Benefit</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= KPI ================= -->
-
-<section class="container mt-5">
-
-<div class="card shadow-lg border-0 rounded-4 p-4">
-
-<div class="row text-center">
-
-<div class="col-md-3 border-end">
-
-<h2 class="text-success">₹46M</h2>
-
-<p>Total Investment</p>
-
-</div>
-
-<div class="col-md-3 border-end">
-
-<h2 class="text-success">66%</h2>
-
-<p>ROI</p>
-
-</div>
-
-<div class="col-md-3 border-end">
-
-<h2 class="text-success">1408</h2>
-
-<p>tCO₂ Saved</p>
-
-</div>
-
-<div class="col-md-3">
-
-<h2 class="text-success">2.33</h2>
-
-<p>Reputation Index</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= FEATURES ================= -->
-
+<!-- KPI CARDS -->
 <section class="container py-5">
+    <div class="row text-center">
 
-<div class="text-center mb-5">
+        <div class="col-md-3 mb-3">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h2 class="text-success">₹46M</h2>
+                    <p>Total Investment</p>
+                </div>
+            </div>
+        </div>
 
-<h2>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h2 class="text-success">66%</h2>
+                    <p>ROI</p>
+                </div>
+            </div>
+        </div>
 
-Platform Features
+        <div class="col-md-3 mb-3">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h2 class="text-success">1408</h2>
+                    <p>tCO₂ Saved</p>
+                </div>
+            </div>
+        </div>
 
-</h2>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h2 class="text-success">2.33</h2>
+                    <p>Reputation Index</p>
+                </div>
+            </div>
+        </div>
 
-<p>
-
-Everything needed for Sustainability ROI Analysis
-
-</p>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-lg-4">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-building"></i>
-
-<h4>
-
-Company Inputs
-
-</h4>
-
-<p>
-
-Financial,
-Operational,
-Emission Baseline
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-4">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-seedling"></i>
-
-<h4>
-
-Initiative Planning
-
-</h4>
-
-<p>
-
-Investment,
-Savings,
-Carbon Reduction
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-4">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-chart-column"></i>
-
-<h4>
-
-Interactive Dashboard
-
-</h4>
-
-<p>
-
-ROI,
-NPV,
-Payback,
-Carbon Value
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
-
-<!-- ================= WHY SUSTAINABILITY ROI ================= -->
-
-<section class="py-5" id="why-roi">
-
-<div class="container">
-
-<div class="text-center mb-5">
-
-<h2 class="fw-bold">Why Sustainability ROI?</h2>
-
-<p class="text-muted">
-
-Make informed sustainability decisions with data-driven insights.
-
-</p>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-lg-3 col-md-6">
-
-<div class="why-card">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h4>Financial Analysis</h4>
-
-<p>
-
-Evaluate investment costs, annual savings, revenue growth,
-and payback period.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="why-card">
-
-<i class="fa-solid fa-leaf"></i>
-
-<h4>Carbon Reduction</h4>
-
-<p>
-
-Track Scope 1, Scope 2 and Scope 3 emissions while
-monitoring reduction targets.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="why-card">
-
-<i class="fa-solid fa-medal"></i>
-
-<h4>Reputation Impact</h4>
-
-<p>
-
-Measure improvements in stakeholder trust,
-brand value and ESG reputation.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="why-card">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<h4>ESG Compliance</h4>
-
-<p>
-
-Support BRSR, CDP, GRI, ISSB and EcoVadis
-reporting requirements.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= ESG PILLARS ================= -->
-
-<section class="py-5 bg-light">
-
-<div class="container">
-
-<div class="text-center mb-5">
-
-<h2>ESG Focus Areas</h2>
-
-<p>Key sustainability pillars considered in the ROI assessment.</p>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="pillar-card">
-<i class="fa-solid fa-scale-balanced"></i>
-<h4>Governance</h4>
-<p>Policies, ethics, compliance and risk management.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="pillar-card">
-<i class="fa-solid fa-earth-asia"></i>
-<h4>Environment</h4>
-<p>Climate, water, waste and carbon reduction initiatives.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="pillar-card">
-<i class="fa-solid fa-users"></i>
-<h4>Social</h4>
-<p>Employee wellbeing, DEI and community engagement.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= GOALS ================= -->
-
+<!-- FEATURES -->
 <section class="container py-5">
+    <div class="text-center mb-5">
+        <h2>Platform Features</h2>
+        <p>Everything needed for Sustainability ROI Analysis</p>
+    </div>
 
-<div class="text-center mb-5">
+    <div class="row">
 
-<h2>Sustainability Goals</h2>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 text-center p-4">
+                <i class="fa-solid fa-building fa-3x text-success mb-3"></i>
+                <h4>Company Inputs</h4>
+                <p>Financial, operational and emissions baseline.</p>
+            </div>
+        </div>
 
-<p>Track progress against major ESG objectives.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 text-center p-4">
+                <i class="fa-solid fa-seedling fa-3x text-success mb-3"></i>
+                <h4>Initiative Planning</h4>
+                <p>Investment, savings and carbon reduction analysis.</p>
+            </div>
+        </div>
 
-</div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 text-center p-4">
+                <i class="fa-solid fa-chart-column fa-3x text-success mb-3"></i>
+                <h4>Dashboard</h4>
+                <p>ROI, NPV, Payback and ESG performance metrics.</p>
+            </div>
+        </div>
 
-<div class="mb-4">
-
-<label class="fw-bold">Carbon Reduction</label>
-
-<div class="progress">
-
-<div class="progress-bar bg-success"
-style="width:70%">
-
-70%
-
-</div>
-
-</div>
-
-</div>
-
-<div class="mb-4">
-
-<label class="fw-bold">Water Conservation</label>
-
-<div class="progress">
-
-<div class="progress-bar bg-info"
-style="width:55%">
-
-55%
-
-</div>
-
-</div>
-
-</div>
-
-<div class="mb-4">
-
-<label class="fw-bold">Waste Recycling</label>
-
-<div class="progress">
-
-<div class="progress-bar bg-warning"
-style="width:82%">
-
-82%
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
-
-<!-- ================= FEATURED INITIATIVES ================= -->
-
-<section class="container py-5 mt-5">
-
-<div class="text-center mb-5">
-
-<p class="text-success fw-bold text-uppercase">
-What We Offer
-</p>
-
-<h2 class="display-5 fw-bold">
-Platform Features
-</h2>
-
-<p class="text-muted">
-Everything needed for Sustainability ROI Analysis
-</p>
-
-</div>
-
-
-<!-- ================= HOW IT WORKS ================= -->
-
-<section class="py-5" id="workflow">
-
-<div class="container">
-
-<div class="text-center mb-5">
-
-<h2 class="fw-bold">How It Works</h2>
-
-<p class="text-muted">
-
-Complete your Sustainability ROI assessment in four simple steps.
-
-</p>
-
-</div>
-
-<div class="row text-center">
-
-<div class="col-lg-3 col-md-6">
-
-<div class="step-card">
-
-<div class="step-number">
-
-1
-
-</div>
-
-<i class="fa-solid fa-building"></i>
-
-<h4>Company Inputs</h4>
-
-<p>
-
-Enter financial, operational and emissions baseline data.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="step-card">
-
-<div class="step-number">
-
-2
-
-</div>
-
-<i class="fa-solid fa-seedling"></i>
-
-<h4>Select Initiatives</h4>
-
-<p>
-
-Choose sustainability initiatives relevant to your organization.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="step-card">
-
-<div class="step-number">
-
-3
-
-</div>
-
-<i class="fa-solid fa-calculator"></i>
-
-<h4>Calculate ROI</h4>
-
-<p>
-
-Evaluate financial, carbon and reputation benefits.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<div class="step-card">
-
-<div class="step-number">
-
-4
-
-</div>
-
-<i class="fa-solid fa-chart-column"></i>
-
-<h4>Generate Reports</h4>
-
-<p>
-
-Visualize results and download sustainability reports.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- ESG PILLARS -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+
+        <h2 class="mb-5">ESG Pillars</h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow border-0">
+                    <i class="fa-solid fa-scale-balanced fa-3x text-success mb-3"></i>
+                    <h4>Governance</h4>
+                    <p>Policies, ethics and compliance management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow border-0">
+                    <i class="fa-solid fa-earth-asia fa-3x text-success mb-3"></i>
+                    <h4>Environment</h4>
+                    <p>Carbon, waste, energy and water management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow border-0">
+                    <i class="fa-solid fa-users fa-3x text-success mb-3"></i>
+                    <h4>Social</h4>
+                    <p>Diversity, employee wellbeing and community impact.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- CTA -->
+<section class="bg-success text-white text-center py-5">
+    <div class="container">
 
-<section class="about-section">
+        <h2>
+            Ready to Measure Your Sustainability ROI?
+        </h2>
 
-<div class="container">
+        <p class="mt-3">
+            Start planning your sustainability initiatives today.
+        </p>
 
-<div class="row align-items-center">
+        <a href="company-inputs.html"
+           class="btn btn-warning btn-lg mt-3">
+            Get Started
+        </a>
 
-<div class="col-lg-6">
-
-<h2>Why Sustainability ROI?</h2>
-
-<p>
-
-The Sustainability ROI Calculator helps organizations
-evaluate sustainability investments by combining
-financial performance, environmental benefits,
-and reputation value into one platform.
-
-</p>
-
-<ul class="list-group list-group-flush">
-
-<li class="list-group-item">✔ Financial ROI Calculation</li>
-
-<li class="list-group-item">✔ Carbon Reduction Tracking</li>
-
-<li class="list-group-item">✔ Reputation Benefit Analysis</li>
-
-<li class="list-group-item">✔ ESG Initiative Planning</li>
-
-</ul>
-
-</div>
-
-<div class="col-lg-6 text-center">
-
-<i class="fa-solid fa-chart-pie display-1 text-success"></i>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
-<!-- ================= TESTIMONIAL ================= -->
-
-<section class="container py-5">
-
-<div class="text-center mb-5">
-
-<h2>Platform Benefits</h2>
-
-</div>
-
-<div class="row">
-
-<div class="col-md-4">
-
-<div class="testimonial">
-
-<i class="fa-solid fa-building"></i>
-
-<h5>Business</h5>
-
-<p>
-
-Evaluate sustainability investment decisions confidently.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="testimonial">
-
-<i class="fa-solid fa-globe"></i>
-
-<h5>Environment</h5>
-
-<p>
-
-Measure environmental impact using carbon and resource metrics.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="testimonial">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h5>Growth</h5>
-
-<p>
-
-Improve business reputation and long-term profitability.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CALL TO ACTION ================= -->
-
-<section class="cta">
-
-<div class="container text-center">
-
-<h2>
-
-Ready to Measure Your Sustainability ROI?
-
-</h2>
-
-<p class="mt-3">
-
-Start planning your sustainability initiatives today.
-
-</p>
-
-<button class="btn btn-warning btn-lg mt-3"
-onclick="startProject()">
-
-Get Started
-
-</button>
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-md-6">
-
-<h4>
-
-<i class="fa-solid fa-leaf"></i>
-
-Sustainability ROI
-
-</h4>
-
-<p>
-
-Financial • Environmental • Reputation Analysis
-
-</p>
-
-</div>
-
-<div class="col-md-3">
-
-<h5>Quick Links</h5>
-
-<ul class="list-unstyled">
-
-<li>Home</li>
-
-<li>Dashboard</li>
-
-<li>Reports</li>
-
-<li>Company Inputs</li>
-
-</ul>
-
-</div>
-
-<div class="col-md-3">
-
-<h5>Contact</h5>
-
-<p>
-
-Krishna<br>
-
-ESG Analytics Project
-
-</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<p class="text-center">
-
-© 2026 Sustainability ROI Calculator. All Rights Reserved.
-
-</p>
-
-</div>
-
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p>
+            © 2026 Sustainability ROI Calculator.
+            All Rights Reserved.
+        </p>
+    </div>
 </footer>
 
-<!-- Bootstrap JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="Script.js"></script>
+<script src="js/app.js"></script>
 
 </body>
-
 </html>
-
-
-<!-- Green strip behind navbar -->
-<div style="
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:90px;
-background:#198754;
-z-index:9998;
-"></div>
