@@ -329,24 +329,28 @@ Emissions Baseline
 <input class="form-control"
 value="50000">
 
+<div class="row mb-4">
+    <div class="col-md-4">
+        <label class="form-label">Scope 1</label>
+        <input type="number" class="form-control" id="scope1" value="50000">
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Scope 2</label>
+        <input type="number" class="form-control" id="scope2" value="70000">
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Scope 3</label>
+        <input type="number" class="form-control" id="scope3" value="200000">
+    </div>
 </div>
 
-<div class="col-md-4">
-
-<label>Scope 2</label>
-
-<input class="form-control"
-value="70000">
-
+<div class="d-grid mb-5">
+    <button class="btn btn-success btn-lg" onclick="calculateROI()">
+        Calculate ROI
+    </button>
 </div>
-
-<button
-class="btn btn-success mt-4"
-onclick="calculateROI()">
-
-Calculate ROI
-
-</button>
 
 <div class="row mt-5">
 
