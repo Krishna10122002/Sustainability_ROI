@@ -868,3 +868,34 @@ body{
 .navbar .nav-link:hover {
     color: #212529 !important;
 }
+
+.container-fluid{
+    max-width: 1500px;
+}
+
+.card{
+    border-radius:18px;
+}
+
+.form-control-lg{
+    height:60px;
+    font-size:1.3rem;
+}
+
+.btn-lg{
+    font-size:1.4rem;
+}
+
+.card-body h2{
+    font-size:2.3rem;
+    font-weight:700;
+}
+
+.card-body h5{
+    margin-bottom:20px;
+}
+
+.row.g-4{
+    --bs-gutter-x:2rem;
+    --bs-gutter-y:2rem;
+}
