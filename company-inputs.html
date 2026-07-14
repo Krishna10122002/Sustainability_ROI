@@ -333,175 +333,95 @@ value="25">
 
 </div>
 
-<!-- Emissions -->
+<!-- ================= Emissions Baseline ================= -->
 
 <div class="container pb-5">
 
-<div class="card shadow-lg p-4">
+    <div class="card shadow-lg p-4">
 
-<h3 class="mb-4">
+        <h3 class="mb-4">Emissions Baseline</h3>
 
-Emissions Baseline
+        <div class="row g-4 mb-4">
 
-</h3>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <label class="form-label">Scope 1 (tCO₂e)</label>
+                <input type="number" class="form-control form-control-lg" id="scope1" value="50000">
+            </div>
 
-<div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <label class="form-label">Scope 2 (tCO₂e)</label>
+                <input type="number" class="form-control form-control-lg" id="scope2" value="70000">
+            </div>
 
-<div class="col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <label class="form-label">Scope 3 (tCO₂e)</label>
+                <input type="number" class="form-control form-control-lg" id="scope3" value="200000">
+            </div>
 
-<label>Scope 1</label>
+        </div>
 
-<input class="form-control"
-value="50000">
+        <div class="d-grid mb-5">
+            <button class="btn btn-success btn-lg py-3" onclick="calculateROI()">
+                Calculate ROI
+            </button>
+        </div>
 
-<div class="row mb-4">
-    <div class="col-md-4">
-        <label class="form-label">Scope 1</label>
-        <input type="number" class="form-control" id="scope1" value="50000">
+        <div class="row text-center g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-body py-4">
+                        <h6>Investment</h6>
+                        <h3 id="investmentResult">₹0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-body py-4">
+                        <h6>Net Benefit</h6>
+                        <h3 id="benefitResult">₹0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-body py-4">
+                        <h6>ROI</h6>
+                        <h3 id="roiResult">0%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-body py-4">
+                        <h6>Payback</h6>
+                        <h3 id="paybackResult">0 Years</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-success btn-lg px-5">
+                Save Company Data
+            </button>
+        </div>
+
     </div>
-
-    <div class="col-md-4">
-        <label class="form-label">Scope 2</label>
-        <input type="number" class="form-control" id="scope2" value="70000">
-    </div>
-
-    <div class="col-md-4">
-        <label class="form-label">Scope 3</label>
-        <input type="number" class="form-control" id="scope3" value="200000">
-    </div>
-</div>
-
-<div class="d-grid mb-5">
-    <button class="btn btn-success btn-lg" onclick="calculateROI()">
-        Calculate ROI
-    </button>
-</div>
-
-<div class="row mt-5">
-
-<div class="col-md-3">
-
-<div class="card shadow">
-
-<div class="card-body">
-
-<h6>Investment</h6>
-
-<h3 id="investmentResult">
-
-₹0
-
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card shadow">
-
-<div class="card-body">
-
-<h6>Net Benefit</h6>
-
-<h3 id="benefitResult">
-
-₹0
-
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card shadow">
-
-<div class="card-body">
-
-<h6>ROI</h6>
-
-<h3 id="roiResult">
-
-0%
-
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card shadow">
-
-<div class="card-body">
-
-<h6>Payback</h6>
-
-<h3 id="paybackResult">
-
-0 Years
-
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<label>Scope 3</label>
-
-<input class="form-control"
-value="200000">
-
-</div>
-
-</div>
-
-<div class="text-center mt-4">
-
-<button class="btn btn-success btn-lg">
-
-Save Company Data
-
-</button>
-
-</div>
-
-</div>
 
 </div>
 
 <footer class="text-center p-4 bg-dark text-white">
-
-© 2026 Sustainability ROI
-
+    © 2026 Sustainability ROI
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="Script.js"></script>
 
 </body>
-
 </html>
