@@ -899,3 +899,27 @@ body{
     --bs-gutter-x:2rem;
     --bs-gutter-y:2rem;
 }
+
+
+/* Navbar */
+
+.navbar {
+    background: #198754 !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffd54f !important;
+}
